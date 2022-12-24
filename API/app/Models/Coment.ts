@@ -12,7 +12,7 @@ export default class Coment extends BaseModel {
   public userComment: string
 
   @column()
-  public MyDevDayId: number
+  public day_id: number
 
   @column.dateTime({ autoCreate: true })
   public createdAt: DateTime

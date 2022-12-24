@@ -7,7 +7,7 @@ export default class ComentsController {
     public async store({request, params, response}: HttpContextContract) {
         const body = request.body()
         const dayId = params.MyDevDayId
-
+        
         await MyDevDay.findOrFail(dayId)
 
         body.MyDevDayId = dayId

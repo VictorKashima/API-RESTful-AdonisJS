@@ -6,10 +6,10 @@ export default class extends BaseSchema {
   public async up () {
     this.schema.createTable(this.tableName, (table) => {
       table.increments('id')
-      table.string('userName')
-      table.string('userComment')
+      table.string("userName")
+      table.string("userComment")
 
-      table.integer('day_id').unsigned().references('days.id').onDelete('CASCADE')
+      table.integer('day_id').unsigned().references('my_dev_days.id').onDelete('CASCADE')
 
       /**
        * Uses timestamptz for PostgreSQL and DATETIME2 for MSSQL
