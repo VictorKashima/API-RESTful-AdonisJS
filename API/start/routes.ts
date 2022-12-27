@@ -28,6 +28,6 @@ Route.group(() => {
 
   Route.resource('/mydevdays', 'MydevdaysController').apiOnly()
 
-  Route.post('/mydevdays/:mydevdayId/comments', 'CommentsController.store')
+  Route.resource('/mydevdays/:mydevdayId/comments', 'CommentsController').apiOnly()
 
 }).prefix('/api')
